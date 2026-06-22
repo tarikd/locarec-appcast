@@ -3,20 +3,20 @@
     <channel>
         <title>LocalMeet</title>
         <item>
-            <title>0.1.27</title>
-            <pubDate>Mon, 22 Jun 2026 14:24:50 +0200</pubDate>
+            <title>0.1.28</title>
+            <pubDate>Mon, 22 Jun 2026 14:38:43 +0200</pubDate>
             <link>https://github.com/tarikd/LocalMeet</link>
-            <sparkle:version>27</sparkle:version>
-            <sparkle:shortVersionString>0.1.27</sparkle:shortVersionString>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>0.1.28</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.27
+            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.28
 
-Adds native Hugging Face OAuth sign-in for speaker identification model access.
+Fixes a crash after returning from Hugging Face OAuth sign-in.
 
-Bundle version: 27
+Bundle version: 28
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-27-1362d40/LocalMeet-0.1.27-1362d40.zip" length="179527268" type="application/octet-stream" sparkle:edSignature="jNSXa0j3vj7YTE8VPVX4s2vbWgGFbdlDVxLjOG4b/y7bajFOL5VYo34KQewJFPmfySeWICPb4Nyvr1+6PBQBAg=="/>
+            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-28-b949884/LocalMeet-0.1.28-b949884.zip" length="179012980" type="application/octet-stream" sparkle:edSignature="FKbsEGt8L/PTMUmXzq6egrqdOV6obb0SMqd4gyDF1vQ6TWT13QIXXWnpmnfrx8EB0v9qASW5Ip5bYs5qn7M1Bg=="/>
         </item>
     </channel>
 </rss>
