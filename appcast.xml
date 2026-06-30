@@ -3,24 +3,23 @@
     <channel>
         <title>LocalMeet</title>
         <item>
-            <title>0.1.32</title>
-            <pubDate>Thu, 25 Jun 2026 23:12:20 +0000</pubDate>
+            <title>0.1.33</title>
+            <pubDate>Tue, 30 Jun 2026 10:16:42 +0000</pubDate>
             <link>https://github.com/tarikd/LocalMeet</link>
-            <sparkle:version>32</sparkle:version>
-            <sparkle:shortVersionString>0.1.32</sparkle:shortVersionString>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>0.1.33</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.32
+            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.33
 
-## Changes since build-31-6867baf
+## Changes since build-32-eda05e5
 
-- Chunk long Parakeet transcriptions (eda05e5)
-- Add Sparkle changelog release notes (1fa1824)
+- Improve Parakeet out-of-memory handling and diagnostics (9329893)
 
-Build: 32
-Commit: eda05e5
+Build: 33
+Commit: 9329893
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-32-eda05e5/LocalMeet-0.1.32-eda05e5.zip" length="176293389" type="application/octet-stream" sparkle:edSignature="7AKcO/1PYBfwonZ65Qa41VZ/Sq0FZEE3Y4UBlnDSYEmEuTvAMFYZjOYvqpYo9zPL5RDV0HgIdMpmMEaL+xBnDQ=="/>
+            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-33-9329893/LocalMeet-0.1.33-9329893.zip" length="176299088" type="application/octet-stream" sparkle:edSignature="oLkmAUzxRw9VhRIErPN1bdN8pq7YqdWhGQHyotV60og/SkCDCCoGTod+u44nyArqM6PvQ0Jc9R2zImHWbMsuBg=="/>
         </item>
     </channel>
 </rss>
