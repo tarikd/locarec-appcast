@@ -3,25 +3,26 @@
     <channel>
         <title>LocalMeet</title>
         <item>
-            <title>0.1.36</title>
-            <pubDate>Sat, 11 Jul 2026 21:35:40 +0000</pubDate>
+            <title>0.1.37</title>
+            <pubDate>Sat, 11 Jul 2026 21:48:46 +0000</pubDate>
             <link>https://github.com/tarikd/LocalMeet</link>
-            <sparkle:version>36</sparkle:version>
-            <sparkle:shortVersionString>0.1.36</sparkle:shortVersionString>
+            <sparkle:version>37</sparkle:version>
+            <sparkle:shortVersionString>0.1.37</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.36
+            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.37
 
 ## Changes since build-35-b0d3626
 
+- Polish meeting detail header and summary cards (3747e64)
 - Fix summarization crash on long transcripts (b181893)
 - Add native llama.cpp summarization backend (no Python) (a6cc117)
 - Replace transcription backend with transcribe.cpp; diarization on Metal (8d71b21)
 
-Build: 36
-Commit: b181893
+Build: 37
+Commit: 3747e64
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-36-b181893/LocalMeet-0.1.36-b181893.zip" length="184449769" type="application/octet-stream" sparkle:edSignature="LdnwbSNPnrA6b06X+Z+yRiXEQFjGzuuLyPifxTcHf/4FjJjYivZYC/bxqoBflEnYfBTO1SCjoXDvgr1FSzdYBg=="/>
+            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-37-3747e64/LocalMeet-0.1.37-3747e64.zip" length="184460017" type="application/octet-stream" sparkle:edSignature="Q0T57/qcIc0HR/mEUg4hzMqbO8DEJPX1lVAnUD28v8Reo3ggslMSkbeG7B4e8hsBPNl8gSZSQa3jsNKmFIeIAg=="/>
         </item>
     </channel>
 </rss>
