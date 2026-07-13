@@ -3,25 +3,23 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.3.39</title>
-            <pubDate>Mon, 13 Jul 2026 00:37:19 +0000</pubDate>
+            <title>0.3.40</title>
+            <pubDate>Mon, 13 Jul 2026 00:55:17 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>39</sparkle:version>
-            <sparkle:shortVersionString>0.3.39</sparkle:shortVersionString>
+            <sparkle:version>40</sparkle:version>
+            <sparkle:shortVersionString>0.3.40</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.39
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.40
 
-## Changes since build-38-371a544
+## Changes since build-39-d2ebd34
 
-- Rename docs to LocaRec and prepare the 0.3.0 release (d2ebd34)
-- Rebrand the app to LocaRec and finish the App Store packaging path (47f6360)
-- Add a sandboxed Mac App Store build variant (fa251b0)
+- Fix the first-run setup dead-end at the model install step (d1465dc)
 
-Build: 39
-Commit: d2ebd34
+Build: 40
+Commit: d1465dc
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-39-d2ebd34/LocaRec-0.3.39-d2ebd34.zip" length="15543126" type="application/octet-stream" sparkle:edSignature="EjWrYod9W8/RLF2TGwQs202d8NeR22p0HTAo9YwzPQ0d38aWLJfhTu1+9fMIGU9xhVUMOm9ZHgzVaIvpwHrcBg=="/>
+            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-40-d1465dc/LocaRec-0.3.40-d1465dc.zip" length="15544636" type="application/octet-stream" sparkle:edSignature="nNLo2n00CWUd2WxLvfflaCrd/j4v14mI4wG2+YdK4yl0B2uIqrFopu40KJafzkb9HTgqNe6XjGawTzmCEqBWCw=="/>
         </item>
     </channel>
 </rss>
