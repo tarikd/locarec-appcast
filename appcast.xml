@@ -3,26 +3,31 @@
     <channel>
         <title>LocalMeet</title>
         <item>
-            <title>0.1.37</title>
-            <pubDate>Sat, 11 Jul 2026 21:48:46 +0000</pubDate>
+            <title>0.2.38</title>
+            <pubDate>Mon, 13 Jul 2026 00:00:37 +0000</pubDate>
             <link>https://github.com/tarikd/LocalMeet</link>
-            <sparkle:version>37</sparkle:version>
-            <sparkle:shortVersionString>0.1.37</sparkle:shortVersionString>
+            <sparkle:version>38</sparkle:version>
+            <sparkle:shortVersionString>0.2.38</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.1.37
+            <description sparkle:format="markdown"><![CDATA[# LocalMeet 0.2.38
 
-## Changes since build-35-b0d3626
+## Changes since build-37-3747e64
 
-- Polish meeting detail header and summary cards (3747e64)
-- Fix summarization crash on long transcripts (b181893)
-- Add native llama.cpp summarization backend (no Python) (a6cc117)
-- Replace transcription backend with transcribe.cpp; diarization on Metal (8d71b21)
+- Bump version to 0.2 for release (371a544)
+- Add changelog for 0.2.0 (b7a2972)
+- Document repository conventions and contribution rules (5a84c98)
+- Move the speaker-count picker into the transcribe dialog; fix the sheet (3623a12)
+- Generate summaries as grammar-constrained JSON (e40c46d)
+- Move summarization to llama.cpp and drop the last bundled Python (4dbeec9)
+- Remove legacy whisper-cli and Parakeet-MLX transcription paths (f59df56)
+- Replace Python/pyannote diarization with native FluidAudio (bd35e5e)
+- Add Mac App Store distribution plan (30aa12a)
 
-Build: 37
-Commit: 3747e64
+Build: 38
+Commit: 371a544
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-37-3747e64/LocalMeet-0.1.37-3747e64.zip" length="184460017" type="application/octet-stream" sparkle:edSignature="Q0T57/qcIc0HR/mEUg4hzMqbO8DEJPX1lVAnUD28v8Reo3ggslMSkbeG7B4e8hsBPNl8gSZSQa3jsNKmFIeIAg=="/>
+            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-38-371a544/LocalMeet-0.2.38-371a544.zip" length="15543920" type="application/octet-stream" sparkle:edSignature="aorlpMT5k/AhPkJLkUfr1PbjCLU61EFTdmpV2NJd4YE2RwfnmHIJotmP5jA3tNTvlAHowH6LWsQS5f9ABpzTCg=="/>
         </item>
     </channel>
 </rss>
