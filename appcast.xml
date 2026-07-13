@@ -3,35 +3,25 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.3.41</title>
-            <pubDate>Mon, 13 Jul 2026 10:38:34 +0000</pubDate>
+            <title>0.3.42</title>
+            <pubDate>Mon, 13 Jul 2026 10:59:19 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>41</sparkle:version>
-            <sparkle:shortVersionString>0.3.41</sparkle:shortVersionString>
+            <sparkle:version>42</sparkle:version>
+            <sparkle:shortVersionString>0.3.42</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.41
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.42
 
-## Changes since build-40-d1465dc
+## Changes since build-41-6635866
 
-- Make the install queue tests independent of which models are installed (6635866)
-- Write up the 0.3.5 changes (03a168a)
-- Let the tab buttons queue jobs and keep finished transcripts from re-running (cb735f1)
-- Add tests for the install queue and launch reconciliation (c14fc96)
-- Drop a deleted recording's queued jobs (500f42f)
-- Add an Activity panel for the download and processing queues (356c3b7)
-- Show queued recordings and allow stacking jobs across recordings (54617b8)
-- Harden the processing queue guards for empty transcripts and mixed jobs (ed89f7b)
-- Queue model installs and processing jobs instead of dropping them (2dc179f)
-- Let a running model download be cancelled (8bcc2d9)
-- Add UserDefaults keys for the install and processing queues (2f6eb17)
-- Add the task-by-task plan for the install and processing queues (3f18b8a)
-- Add the design for queued model installs and processing (75c103e)
+- Write up the 0.3.6 changes (aeb8024)
+- Mention speaker identification in the first-run setup checklist (78ca3ed)
+- Fix the summary tab and cancelled-transcribe handling for queued recordings (daee493)
 
-Build: 41
-Commit: 6635866
+Build: 42
+Commit: aeb8024
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-41-6635866/LocaRec-0.3.41-6635866.zip" length="15647090" type="application/octet-stream" sparkle:edSignature="LcSkNLKK5uKu8y4eEL3wQiGuD7877PoL6VBXLh4aQedCjA3B5L6x+8kW3Fsp4upDLA+GOGztfwOvONXSveG8DA=="/>
+            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-42-aeb8024/LocaRec-0.3.42-aeb8024.zip" length="15652856" type="application/octet-stream" sparkle:edSignature="QeIXVaP/oSj4C2DCjaNOMIRA39AZ+alTwvXj9QLgAtCfLPsI6zPGaWpXX3PmuHFJCnAQe9UwkDgog9jziwzGBQ=="/>
         </item>
     </channel>
 </rss>
