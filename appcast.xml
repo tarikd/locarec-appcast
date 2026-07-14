@@ -3,23 +3,23 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.3.43</title>
-            <pubDate>Mon, 13 Jul 2026 22:27:30 +0000</pubDate>
+            <title>0.3.44</title>
+            <pubDate>Tue, 14 Jul 2026 08:18:52 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>43</sparkle:version>
-            <sparkle:shortVersionString>0.3.43</sparkle:shortVersionString>
+            <sparkle:version>44</sparkle:version>
+            <sparkle:shortVersionString>0.3.44</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.43
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.44
 
-## Changes since build-42-aeb8024
+## Changes since build-43-63d523c
 
-- Package and sign the app for the Mac App Store (63d523c)
+- Point the update feed at the renamed appcast repo (02c2973)
 
-Build: 43
-Commit: 63d523c
+Build: 44
+Commit: 02c2973
 ]]></description>
-            <enclosure url="https://github.com/tarikd/localmeet-appcast/releases/download/build-43-63d523c/LocaRec-0.3.43-63d523c.zip" length="15651694" type="application/octet-stream" sparkle:edSignature="zIP1BsV48d94WqVMeZl+rxcp4HnFfYWb+bkascJbsMk1X//0GLoQjfDSwd/ROJ1Z0zsOjFfR2bzvsWO36silAQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/build-44-02c2973/LocaRec-0.3.44-02c2973.zip" length="15651632" type="application/octet-stream" sparkle:edSignature="GWJ7NoMstLgNzLPCa7fkJqRKCPbhYoYW3nZ0NfAHFYSiop4m9zDAO4xHM/35QbgdREXggmgZw715wpQfIz6lDQ=="/>
         </item>
     </channel>
 </rss>
