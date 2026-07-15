@@ -3,23 +3,23 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.3.44</title>
-            <pubDate>Tue, 14 Jul 2026 08:18:52 +0000</pubDate>
+            <title>0.3.45</title>
+            <pubDate>Wed, 15 Jul 2026 13:18:01 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>44</sparkle:version>
-            <sparkle:shortVersionString>0.3.44</sparkle:shortVersionString>
+            <sparkle:version>45</sparkle:version>
+            <sparkle:shortVersionString>0.3.45</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.44
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.3.45
 
-## Changes since build-43-63d523c
+## Changes since build-44-02c2973
 
-- Point the update feed at the renamed appcast repo (02c2973)
+- Fix system-audio capture saving silence instead of the recording (a210bee)
 
-Build: 44
-Commit: 02c2973
+Build: 45
+Commit: a210bee
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/build-44-02c2973/LocaRec-0.3.44-02c2973.zip" length="15651632" type="application/octet-stream" sparkle:edSignature="GWJ7NoMstLgNzLPCa7fkJqRKCPbhYoYW3nZ0NfAHFYSiop4m9zDAO4xHM/35QbgdREXggmgZw715wpQfIz6lDQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/build-45-a210bee/LocaRec-0.3.45-a210bee.zip" length="15668167" type="application/octet-stream" sparkle:edSignature="VpSwSCwm+2Xm158zp5ZvFPoP0n9FseFwPVPfGhflTeRC0hDKMPe/tZQcb7cCmVHuQGSmgmFWtwCgwmAWX9myAg=="/>
         </item>
     </channel>
 </rss>
