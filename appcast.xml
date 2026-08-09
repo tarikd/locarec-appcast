@@ -3,24 +3,28 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.6.0</title>
-            <pubDate>Thu, 16 Jul 2026 21:35:30 +0000</pubDate>
+            <title>0.7.1</title>
+            <pubDate>Sun, 09 Aug 2026 19:29:04 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>48</sparkle:version>
-            <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+            <sparkle:version>49</sparkle:version>
+            <sparkle:shortVersionString>0.7.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.6.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.7.1
 
 
-### Added
+### Changed
 
-- Swipe a recording left in the sidebar to bring up a Delete button. It still asks you to confirm before deleting, and the right-click Delete menu still works.
+- Recordings are now saved to a folder you pick, not to a hidden folder inside the app. The first time you record or import, LocaRec asks where to keep them; after that it remembers. You can move the folder later from Settings, and any recordings already made move with it.
 
-Build: 48
-Commit: 5b6a36f
+### Fixed
+
+- Recordings made by earlier versions are moved out of the app's private storage into your chosen folder the first time you pick one. If a file cannot be moved because something with the same name is already there, the original is left alone and LocaRec tries again next launch.
+
+Build: 49
+Commit: ee402da
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.6.0/LocaRec-0.6.0-5b6a36f.zip" length="15743282" type="application/octet-stream" sparkle:edSignature="42R7P8+q1UrLsSFZJV38RnU7ko9KrtiKOXTWG9sh4BthiZfpC6/ppN2z5G5gJMvSdWHSdMw2DLnAiElsmUvhCg=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.7.1/LocaRec-0.7.1-ee402da.zip" length="15767296" type="application/octet-stream" sparkle:edSignature="MUmV1UaYwPm1loXgfjZxclANoi7Rq8Qg98QQOLc0gdYj/4jgjpLjIqCnrmRzuN/pZOlYtfTy3LG6ggZTMjqPDw=="/>
         </item>
     </channel>
 </rss>
