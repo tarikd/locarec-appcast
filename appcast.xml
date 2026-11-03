@@ -3,28 +3,28 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.7.1</title>
-            <pubDate>Sun, 09 Aug 2026 19:29:04 +0000</pubDate>
+            <title>0.7.2</title>
+            <pubDate>Tue, 03 Nov 2026 12:51:54 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>49</sparkle:version>
-            <sparkle:shortVersionString>0.7.1</sparkle:shortVersionString>
+            <sparkle:version>51</sparkle:version>
+            <sparkle:shortVersionString>0.7.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.7.1
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.7.2
 
-
-### Changed
-
-- Recordings are now saved to a folder you pick, not to a hidden folder inside the app. The first time you record or import, LocaRec asks where to keep them; after that it remembers. You can move the folder later from Settings, and any recordings already made move with it.
 
 ### Fixed
 
-- Recordings made by earlier versions are moved out of the app's private storage into your chosen folder the first time you pick one. If a file cannot be moved because something with the same name is already there, the original is left alone and LocaRec tries again next launch.
+- If LocaRec can't read part of its list of recordings, it keeps every recording it can still read and saves a copy of the original file next to it. Before, one damaged entry could empty the whole list, and the next recording would save over it.
+- Changing the recordings folder moves only LocaRec's own recordings. It used to move everything in the old folder, so if you had picked a folder like Documents and later switched, all of Documents went with it. The Mac App Store version can now reach the old folder too, so recordings actually make the move. You can't change the folder while a recording is running.
+- If a System Audio + Microphone recording hits a problem as it stops, like a microphone unplugged mid-meeting, LocaRec keeps whichever track it got. If neither track can be read, LocaRec leaves both in your recordings folder instead of deleting them.
+- Quitting, logging out or restarting during a recording stops and saves it first. If LocaRec crashes or is force-quit mid-recording, it recovers the audio the next time it opens, instead of leaving the recording stuck as "Recording".
+- Clicking Record twice quickly, or pressing ⌘⇧R while a recording is still starting, no longer starts a second recording on top of the first.
 
-Build: 49
-Commit: ee402da
+Build: 51
+Commit: 45f4aa5
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.7.1/LocaRec-0.7.1-ee402da.zip" length="15767296" type="application/octet-stream" sparkle:edSignature="MUmV1UaYwPm1loXgfjZxclANoi7Rq8Qg98QQOLc0gdYj/4jgjpLjIqCnrmRzuN/pZOlYtfTy3LG6ggZTMjqPDw=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.7.2/LocaRec-0.7.2-45f4aa5.zip" length="15788750" type="application/octet-stream" sparkle:edSignature="ah5TDKp/suanrEuHiasTgorgpCjKCBBJwjqJ2dOiAkul4Q6plfLF82KyEIuSIqilWiJdz8k+LTgWGjpuBZKwBg=="/>
         </item>
     </channel>
 </rss>
