@@ -3,31 +3,28 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.9.0</title>
-            <pubDate>Sun, 15 Nov 2026 02:41:28 +0000</pubDate>
+            <title>0.10.0</title>
+            <pubDate>Sun, 15 Nov 2026 02:43:00 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>57</sparkle:version>
-            <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
+            <sparkle:version>59</sparkle:version>
+            <sparkle:shortVersionString>0.10.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.9.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.10.0
 
 
 ### Changed
 
-- The main window looks flatter. The sidebar and the meeting now sit side by side instead of floating as separate cards, and buttons and links use LocaRec's teal instead of the system blue, in light and dark mode.
-- Each recording in the sidebar shows one status on the right: how many action items are still open, "Not transcribed", "Queued", or what it's working on.
-- While you record, the Record button turns red, reads Stop & Save, and shows how long you've been recording.
-- Speakers get a new set of colors that stay readable in light and dark mode, so someone in an older meeting may show up in a different color than before.
+- A meeting reads as one page now. The summary, decisions, action items and key moments sit above the transcript, so there's no switching between tabs.
+- A timeline down the right edge shows who spoke when, where your key moments are and where playback is. Click or drag on it to jump to that point, in the audio and in the transcript.
+- The player floats over the bottom of the page and has a button to go back 15 seconds.
+- Searching the transcript marks every matching paragraph on the timeline. ⌘F jumps to the search box.
+- Click a speaker's name to change who said a paragraph, play from that point, rename speakers or delete the paragraph.
 
-### Fixed
-
-- VoiceOver reads the sidebar's show and hide buttons and the Import button by name, not by their icons.
-
-Build: 57
-Commit: 2a975d3
+Build: 59
+Commit: 6e029a1
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.9.0/LocaRec-0.9.0-2a975d3.zip" length="15822563" type="application/octet-stream" sparkle:edSignature="4m7ie5Db3DJv92JUPNlavJMUYmS8PvBl7XuDWiFfneQywrZEl7osj9/uG1ALj4Ltz8PYgCUKtl0+53fJ35hwAA=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.10.0/LocaRec-0.10.0-6e029a1.zip" length="15934739" type="application/octet-stream" sparkle:edSignature="n/0SH/BoLWVEsDoJVURxE0tWDRO8Z5gEar450HaTe8wNsWm7GDCDaT1lMQFyGFDG+D3DYOiPkcAovg6XsMiGDw=="/>
         </item>
     </channel>
 </rss>
