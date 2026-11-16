@@ -3,28 +3,34 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.10.0</title>
-            <pubDate>Sun, 15 Nov 2026 02:43:00 +0000</pubDate>
+            <title>0.11.0</title>
+            <pubDate>Mon, 16 Nov 2026 00:31:48 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>59</sparkle:version>
-            <sparkle:shortVersionString>0.10.0</sparkle:shortVersionString>
+            <sparkle:version>61</sparkle:version>
+            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.10.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.11.0
 
+
+### Added
+
+- Transcribing shows real progress. The meeting page lists each step: transcribing and identifying speakers each show a percentage, and writing the summary shows how long it's been going. The recording in the sidebar shows the same percentage with a thin bar.
+- LocaRec can write the summary as soon as transcription finishes. It's off by default. Turn it on in Settings, or for one recording with "Then write the summary" when you transcribe it.
 
 ### Changed
 
-- A meeting reads as one page now. The summary, decisions, action items and key moments sit above the transcript, so there's no switching between tabs.
-- A timeline down the right edge shows who spoke when, where your key moments are and where playback is. Click or drag on it to jump to that point, in the audio and in the transcript.
-- The player floats over the bottom of the page and has a button to go back 15 seconds.
-- Searching the transcript marks every matching paragraph on the timeline. ⌘F jumps to the search box.
-- Click a speaker's name to change who said a paragraph, play from that point, rename speakers or delete the paragraph.
+- The transcribe options now sit on the meeting page, where the summary will go, instead of in a separate window. To transcribe a recording again, choose Transcribe from the ⋯ menu.
+- When something fails, the error shows where the summary goes, with a Try Again button.
 
-Build: 59
-Commit: 6e029a1
+### Fixed
+
+- Stop now really stops. Before, the job ran to the end and saved its result anyway. Now nothing a stopped job produced is kept, and the meeting says "Stopping…" until it has ended. Transcribing stops after the current two-minute stretch of audio; identifying speakers and writing a summary stop once the pass they're in finishes.
+
+Build: 61
+Commit: 54cad3b
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.10.0/LocaRec-0.10.0-6e029a1.zip" length="15934739" type="application/octet-stream" sparkle:edSignature="n/0SH/BoLWVEsDoJVURxE0tWDRO8Z5gEar450HaTe8wNsWm7GDCDaT1lMQFyGFDG+D3DYOiPkcAovg6XsMiGDw=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.11.0/LocaRec-0.11.0-54cad3b.zip" length="16060218" type="application/octet-stream" sparkle:edSignature="GUu3JYS2S11A+wmI/p3XUCZY2RkDW/Xm0AZKsKoCdQxUR2t52xfES2YRFfoRKl0FSQgdfIbRnyLloA1nw3j9BA=="/>
         </item>
     </channel>
 </rss>
