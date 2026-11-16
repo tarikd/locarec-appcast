@@ -3,24 +3,39 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.12.1</title>
-            <pubDate>Mon, 16 Nov 2026 02:12:04 +0000</pubDate>
+            <title>0.13.0</title>
+            <pubDate>Mon, 16 Nov 2026 07:48:09 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>65</sparkle:version>
-            <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
+            <sparkle:version>67</sparkle:version>
+            <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.12.1
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.13.0
 
 
-### Fixed
+### Added
 
-- If you picked a specific microphone in Settings, stopping a recording and starting another one right away (⌘⇧R twice) could leave the new recording silent while the app still showed it recording. Stopping the first one no longer cuts off the second.
+- A setup checklist in the sidebar, above your recordings, walks you through microphone access and a speech model, plus the optional summary and speaker models. You can allow the microphone and download each model right from the checklist, and it shows how far each download has got. It goes away once you can record and transcribe, or when you click Hide checklist.
+- If you record before a speech model is ready and automatic transcription is on, the recording is transcribed as soon as there is one: when a download finishes, or when you choose a model you've already downloaded.
 
-Build: 65
-Commit: 433e792
+### Changed
+
+- With no recordings yet, the window shows how to record your first meeting. Pick what to record from, then start recording or import a file. The setup steps that used to be on this screen are in the sidebar checklist now.
+- When you download a model and haven't chosen one of that kind yet, LocaRec uses it right away. You no longer have to click Set Active after your first download.
+- If the speech model you chose is missing, a new recording waits for one instead of failing to transcribe.
+- The speaker model downloads in the same queue as the other models, so you can watch its progress in Activity and cancel it there. Cancelling a download no longer shows up as an error.
+- Opening Settings no longer changes which models are chosen. It only clears a choice whose model isn't downloaded anymore.
+- Model names are shorter: "Gemma 4 E4B" instead of "Gemma 4 E4B IT (llama.cpp)".
+- Download progress updates once per percent, so the window does less work while a model downloads.
+
+### Removed
+
+- The Get Started item at the bottom of the sidebar. The checklist replaces it.
+
+Build: 67
+Commit: ae09dd5
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.12.1/LocaRec-0.12.1-433e792.zip" length="16156890" type="application/octet-stream" sparkle:edSignature="PR/u/WEleDs/MkWgy1jB1xmKqy3t603ZP08fVAowK3nV6OVqchp4ro4J7BBtFaQk/nqmcgb9K1kYaSzUwuDkBQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.13.0/LocaRec-0.13.0-ae09dd5.zip" length="16263483" type="application/octet-stream" sparkle:edSignature="NN2q9hg7M+yj20Ey8BILr0iJgPt6S+cdI7dxffl1K1Y2iv84vI3+T8NlkRbieDQP1ZNH1DlW4pkjWu5IEGmiDQ=="/>
         </item>
     </channel>
 </rss>
