@@ -3,34 +3,34 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.11.0</title>
-            <pubDate>Mon, 16 Nov 2026 00:31:48 +0000</pubDate>
+            <title>0.12.0</title>
+            <pubDate>Mon, 16 Nov 2026 01:45:52 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>61</sparkle:version>
-            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
+            <sparkle:version>63</sparkle:version>
+            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.11.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.12.0
 
 
 ### Added
 
-- Transcribing shows real progress. The meeting page lists each step: transcribing and identifying speakers each show a percentage, and writing the summary shows how long it's been going. The recording in the sidebar shows the same percentage with a thin bar.
-- LocaRec can write the summary as soon as transcription finishes. It's off by default. Turn it on in Settings, or for one recording with "Then write the summary" when you transcribe it.
+- You can type notes while you record. Each one is stamped with the moment you started typing it and shows up as a key moment once the meeting is saved. Pressing Return on an empty line drops a plain marker, like the old Add Marker button did. If you stop recording halfway through a note, the note is kept. The menu bar has the same note field.
 
 ### Changed
 
-- The transcribe options now sit on the meeting page, where the summary will go, instead of in a separate window. To transcribe a recording again, choose Transcribe from the ⋯ menu.
-- When something fails, the error shows where the summary goes, with a Try Again button.
+- The recording page is quieter now: the title, a slim waveform and your notes, with the elapsed time and the input in use along the top. The input line names your actual microphone instead of "System Default".
+- The menu bar popover has the new look, and its gear button opens Settings.
 
 ### Fixed
 
-- Stop now really stops. Before, the job ran to the end and saved its result anyway. Now nothing a stopped job produced is kept, and the meeting says "Stopping…" until it has ended. Transcribing stops after the current two-minute stretch of audio; identifying speakers and writing a summary stop once the pass they're in finishes.
+- The recording waveform follows the sound for every input. Before, it only moved with the default microphone, and with system audio, Both or a chosen microphone it sat still.
+- Renaming a meeting while it's being transcribed or summarized no longer gets undone when the job finishes. The same goes for speaker fixes made while a summary is being written.
 
-Build: 61
-Commit: 54cad3b
+Build: 63
+Commit: 43ce42a
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.11.0/LocaRec-0.11.0-54cad3b.zip" length="16060218" type="application/octet-stream" sparkle:edSignature="GUu3JYS2S11A+wmI/p3XUCZY2RkDW/Xm0AZKsKoCdQxUR2t52xfES2YRFfoRKl0FSQgdfIbRnyLloA1nw3j9BA=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.12.0/LocaRec-0.12.0-43ce42a.zip" length="16151833" type="application/octet-stream" sparkle:edSignature="Y+mJ6CAM1Qe92jlaTv+KGt8wY8au6ufoump4yIDXIfaFYkKlRchdCpO0DQW6PwAkcMAUWmqF37I+ShNNumArDQ=="/>
         </item>
     </channel>
 </rss>
