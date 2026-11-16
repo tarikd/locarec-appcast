@@ -3,34 +3,24 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.12.0</title>
-            <pubDate>Mon, 16 Nov 2026 01:45:52 +0000</pubDate>
+            <title>0.12.1</title>
+            <pubDate>Mon, 16 Nov 2026 02:12:04 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>63</sparkle:version>
-            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
+            <sparkle:version>65</sparkle:version>
+            <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.12.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.12.1
 
-
-### Added
-
-- You can type notes while you record. Each one is stamped with the moment you started typing it and shows up as a key moment once the meeting is saved. Pressing Return on an empty line drops a plain marker, like the old Add Marker button did. If you stop recording halfway through a note, the note is kept. The menu bar has the same note field.
-
-### Changed
-
-- The recording page is quieter now: the title, a slim waveform and your notes, with the elapsed time and the input in use along the top. The input line names your actual microphone instead of "System Default".
-- The menu bar popover has the new look, and its gear button opens Settings.
 
 ### Fixed
 
-- The recording waveform follows the sound for every input. Before, it only moved with the default microphone, and with system audio, Both or a chosen microphone it sat still.
-- Renaming a meeting while it's being transcribed or summarized no longer gets undone when the job finishes. The same goes for speaker fixes made while a summary is being written.
+- If you picked a specific microphone in Settings, stopping a recording and starting another one right away (⌘⇧R twice) could leave the new recording silent while the app still showed it recording. Stopping the first one no longer cuts off the second.
 
-Build: 63
-Commit: 43ce42a
+Build: 65
+Commit: 433e792
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.12.0/LocaRec-0.12.0-43ce42a.zip" length="16151833" type="application/octet-stream" sparkle:edSignature="Y+mJ6CAM1Qe92jlaTv+KGt8wY8au6ufoump4yIDXIfaFYkKlRchdCpO0DQW6PwAkcMAUWmqF37I+ShNNumArDQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.12.1/LocaRec-0.12.1-433e792.zip" length="16156890" type="application/octet-stream" sparkle:edSignature="PR/u/WEleDs/MkWgy1jB1xmKqy3t603ZP08fVAowK3nV6OVqchp4ro4J7BBtFaQk/nqmcgb9K1kYaSzUwuDkBQ=="/>
         </item>
     </channel>
 </rss>
