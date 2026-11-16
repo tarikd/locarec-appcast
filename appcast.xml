@@ -3,39 +3,36 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.13.0</title>
-            <pubDate>Mon, 16 Nov 2026 07:48:09 +0000</pubDate>
+            <title>0.14.0</title>
+            <pubDate>Mon, 16 Nov 2026 11:29:32 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>67</sparkle:version>
-            <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
+            <sparkle:version>69</sparkle:version>
+            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.13.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.14.0
 
-
-### Added
-
-- A setup checklist in the sidebar, above your recordings, walks you through microphone access and a speech model, plus the optional summary and speaker models. You can allow the microphone and download each model right from the checklist, and it shows how far each download has got. It goes away once you can record and transcribe, or when you click Hide checklist.
-- If you record before a speech model is ready and automatic transcription is on, the recording is transcribed as soon as there is one: when a download finishes, or when you choose a model you've already downloaded.
 
 ### Changed
 
-- With no recordings yet, the window shows how to record your first meeting. Pick what to record from, then start recording or import a file. The setup steps that used to be on this screen are in the sidebar checklist now.
-- When you download a model and haven't chosen one of that kind yet, LocaRec uses it right away. You no longer have to click Set Active after your first download.
-- If the speech model you chose is missing, a new recording waits for one instead of failing to transcribe.
-- The speaker model downloads in the same queue as the other models, so you can watch its progress in Activity and cancel it there. Cancelling a download no longer shows up as an error.
-- Opening Settings no longer changes which models are chosen. It only clears a choice whose model isn't downloaded anymore.
-- Model names are shorter: "Gemma 4 E4B" instead of "Gemma 4 E4B IT (llama.cpp)".
-- Download progress updates once per percent, so the window does less work while a model downloads.
+- Models is one page now. It shows how much room your models take, then lists the speech, summary and speaker models. Each row has the model's size and one action: Use, Download, or the download's progress with a button to cancel it. The model you're using says In use.
+- You pick your speech and summary models on Models, and download the speaker model there too. Settings doesn't have these anymore.
+- Deleting a model asks first. If it's the one you're using, the message says what stops until you pick another.
+- Settings is a page of plain rows. When a permission is missing, a note at the top says what it blocks for the way you record, with a button to allow it or open System Settings. Notifications only count when LocaRec is set to notify you. A permission your organization restricts is listed without a button, since System Settings can't change it.
+- What happens when a recording stops is in one place, in order: transcribe it, identify speakers, write the summary, then notify you. Each one says which model it uses, or links to Models when it needs one.
+- A few Settings labels changed. "Launch at startup" is now "Open at login", "Start hidden" is "Start in the menu bar", and "Reveal" is "Show in Finder".
+- Activity shows the running job's progress, how long it's been going and what comes next, and numbers the jobs waiting behind it. Click a meeting's name to open it.
 
-### Removed
+### Fixed
 
-- The Get Started item at the bottom of the sidebar. The checklist replaces it.
+- You could delete a model that a waiting or running transcription or summary still needed, and that job would then fail. The delete button now waits until the work is done, and its tooltip says why.
+- Keeping Settings open during a recording no longer looks up your microphones ten times a second.
+- Messages about a missing model send you to Models instead of Settings.
 
-Build: 67
-Commit: ae09dd5
+Build: 69
+Commit: 9e660f1
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.13.0/LocaRec-0.13.0-ae09dd5.zip" length="16263483" type="application/octet-stream" sparkle:edSignature="NN2q9hg7M+yj20Ey8BILr0iJgPt6S+cdI7dxffl1K1Y2iv84vI3+T8NlkRbieDQP1ZNH1DlW4pkjWu5IEGmiDQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.14.0/LocaRec-0.14.0-9e660f1.zip" length="16294122" type="application/octet-stream" sparkle:edSignature="RWvhs9eFVOPh+0irW8yGqPEyMR4tqE8er/zxpz4ItpMBfGQyaXlotgJfMXVNPFWvgTox4r3/J1bampJCHlguDg=="/>
         </item>
     </channel>
 </rss>
