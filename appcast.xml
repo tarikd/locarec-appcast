@@ -3,36 +3,24 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.14.0</title>
-            <pubDate>Mon, 16 Nov 2026 11:29:32 +0000</pubDate>
+            <title>0.14.1</title>
+            <pubDate>Tue, 17 Nov 2026 05:10:32 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>69</sparkle:version>
-            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
+            <sparkle:version>71</sparkle:version>
+            <sparkle:shortVersionString>0.14.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.14.0
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.14.1
 
 
-### Changed
+### Removed
 
-- Models is one page now. It shows how much room your models take, then lists the speech, summary and speaker models. Each row has the model's size and one action: Use, Download, or the download's progress with a button to cancel it. The model you're using says In use.
-- You pick your speech and summary models on Models, and download the speaker model there too. Settings doesn't have these anymore.
-- Deleting a model asks first. If it's the one you're using, the message says what stops until you pick another.
-- Settings is a page of plain rows. When a permission is missing, a note at the top says what it blocks for the way you record, with a button to allow it or open System Settings. Notifications only count when LocaRec is set to notify you. A permission your organization restricts is listed without a button, since System Settings can't change it.
-- What happens when a recording stops is in one place, in order: transcribe it, identify speakers, write the summary, then notify you. Each one says which model it uses, or links to Models when it needs one.
-- A few Settings labels changed. "Launch at startup" is now "Open at login", "Start hidden" is "Start in the menu bar", and "Reveal" is "Show in Finder".
-- Activity shows the running job's progress, how long it's been going and what comes next, and numbers the jobs waiting behind it. Click a meeting's name to open it.
+- Old code for writing summaries with a local Ollama server. Every summary model runs on llama.cpp inside LocaRec, so none of it could run anymore. You won't notice anything different.
 
-### Fixed
-
-- You could delete a model that a waiting or running transcription or summary still needed, and that job would then fail. The delete button now waits until the work is done, and its tooltip says why.
-- Keeping Settings open during a recording no longer looks up your microphones ten times a second.
-- Messages about a missing model send you to Models instead of Settings.
-
-Build: 69
-Commit: 9e660f1
+Build: 71
+Commit: c37a9c4
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.14.0/LocaRec-0.14.0-9e660f1.zip" length="16294122" type="application/octet-stream" sparkle:edSignature="RWvhs9eFVOPh+0irW8yGqPEyMR4tqE8er/zxpz4ItpMBfGQyaXlotgJfMXVNPFWvgTox4r3/J1bampJCHlguDg=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.14.1/LocaRec-0.14.1-c37a9c4.zip" length="16269196" type="application/octet-stream" sparkle:edSignature="vn1RMk8WcW2eqt4F2ibrwA7E8O+1/djaUArfJdRJlZQZ+UQhOllADaSNgMNTsTHiyEUO7RBO19pkx3WJ6HAzCw=="/>
         </item>
     </channel>
 </rss>
