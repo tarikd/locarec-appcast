@@ -3,24 +3,24 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.14.1</title>
-            <pubDate>Tue, 17 Nov 2026 05:10:32 +0000</pubDate>
+            <title>0.14.2</title>
+            <pubDate>Fri, 20 Nov 2026 15:13:43 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>71</sparkle:version>
-            <sparkle:shortVersionString>0.14.1</sparkle:shortVersionString>
+            <sparkle:version>72</sparkle:version>
+            <sparkle:shortVersionString>0.14.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.14.1
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.14.2
 
+### Changed
 
-### Removed
+- The direct download is now an optimized release build. Until now, LocaRec's own code and its speaker identification shipped as debug builds. Transcription and summaries were already optimized because they come prebuilt. The app is also about 9 MB smaller.
+- The release process now checks the version number before it builds anything. A number that was already used, or that skips one, stops the release. Releases also go out one at a time, so an older update can't replace a newer one. You won't notice anything different in the app.
 
-- Old code for writing summaries with a local Ollama server. Every summary model runs on llama.cpp inside LocaRec, so none of it could run anymore. You won't notice anything different.
-
-Build: 71
-Commit: c37a9c4
+Build: 72
+Commit: 93ed73b
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.14.1/LocaRec-0.14.1-c37a9c4.zip" length="16269196" type="application/octet-stream" sparkle:edSignature="vn1RMk8WcW2eqt4F2ibrwA7E8O+1/djaUArfJdRJlZQZ+UQhOllADaSNgMNTsTHiyEUO7RBO19pkx3WJ6HAzCw=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.14.2/LocaRec-0.14.2-93ed73b.zip" length="13905936" type="application/octet-stream" sparkle:edSignature="DKGnSUGbGwyh/2ftensd7JqpRzb8/r5njw+u23s/uVi54fGa7+zQbq0ERt7YdZ2lwfBmJHxHaq+K1JuqBxXcBg=="/>
         </item>
     </channel>
 </rss>
