@@ -3,23 +3,23 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.15.1</title>
-            <pubDate>Fri, 20 Nov 2026 17:11:15 +0000</pubDate>
+            <title>0.15.2</title>
+            <pubDate>Fri, 20 Nov 2026 17:34:39 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>74</sparkle:version>
-            <sparkle:shortVersionString>0.15.1</sparkle:shortVersionString>
+            <sparkle:version>75</sparkle:version>
+            <sparkle:shortVersionString>0.15.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.15.1
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.15.2
 
-### Changed
+### Fixed
 
-- The release process now also uploads each version to App Store Connect, with the same version and build number as the direct download. You won't notice anything different in the app.
+- The App Store upload couldn't find the installer certificate when it shares a private key with the Apple Distribution certificate, which is the usual setup. It now imports each certificate on its own. You won't notice anything different in the app.
 
-Build: 74
-Commit: 263fe1d
+Build: 75
+Commit: e888cd0
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.1/LocaRec-0.15.1-263fe1d.zip" length="15590405" type="application/octet-stream" sparkle:edSignature="OkKo7qCZC1bTKFsPORHthzs2tGzlPVo0BIN9ypNrcIBc2ArnNZz0Fw+NHo2oSAdG0TGnQIfjdKAECTRsGHJ/Aw=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.2/LocaRec-0.15.2-e888cd0.zip" length="15590494" type="application/octet-stream" sparkle:edSignature="b2i0TYV0tF6aRDYuKqcRrLCUIRxq4EoZMRl0j2wvLmL9GdFeC3yU2srQCdV7RjEoTXlDv1aoMgyZgofXecsDAA=="/>
         </item>
     </channel>
 </rss>
