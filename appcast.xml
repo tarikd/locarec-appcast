@@ -3,23 +3,292 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.15.2</title>
-            <pubDate>Fri, 20 Nov 2026 17:34:39 +0000</pubDate>
+            <title>0.15.3</title>
+            <pubDate>Fri, 20 Nov 2026 17:59:35 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>75</sparkle:version>
-            <sparkle:shortVersionString>0.15.2</sparkle:shortVersionString>
+            <sparkle:version>76</sparkle:version>
+            <sparkle:shortVersionString>0.15.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.15.2
+            <description sparkle:format="markdown"><![CDATA[## 0.15.3 (2026-11-20)
 
-### Fixed
+#### Changed
+
+- The update window now shows the whole changelog, newest version first. Scroll down to see what changed in earlier versions, including any you skipped.
+
+## 0.15.2 (2026-11-20)
+
+#### Fixed
 
 - The App Store upload couldn't find the installer certificate when it shares a private key with the Apple Distribution certificate, which is the usual setup. It now imports each certificate on its own. You won't notice anything different in the app.
 
-Build: 75
-Commit: e888cd0
+## 0.15.1 (2026-11-20)
+
+#### Changed
+
+- The release process now also uploads each version to App Store Connect, with the same version and build number as the direct download. You won't notice anything different in the app.
+
+## 0.15.0 (2026-11-20)
+
+#### Added
+
+- Parakeet Ultra is the new recommended speech model. It's the same size as Parakeet TDT 0.6B v3 and covers the same 25 European languages, but makes fewer mistakes in each of them. It also splits long recordings at pauses, so speaker labels follow who's talking more closely.
+- Two new summary models, Qwen3.5 9B and Ministral 3 8B.
+
+#### Changed
+
+- Speech recognition now runs on transcribe.cpp 0.4.2, which Parakeet Ultra needs.
+- Some older models are retired: Parakeet TDT 0.6B v3 and its Q8 build, the Q8 build of Whisper Large v3 Turbo, Mistral 7B Instruct v0.3 and Qwen3 8B. If you already downloaded one, it keeps working and stays in Models so you can delete it later. If you didn't, you won't see it.
+- Speakers are now matched to the transcript word by word. With Parakeet, a new paragraph starts at the word where the speaker changes, so a single paragraph no longer holds a whole back-and-forth between two people. In a test conversation with three people, the share of words credited to the right person went from about 40% to 85%, or 75% when LocaRec works out how many people spoke. Whisper doesn't give word timings, so it still labels a stretch of speech at a time.
+- When a speaker change lands a word or two from the end of a sentence, and those words fall in the gap between two people's turns, they stay with the sentence they belong to.
+- Speaker identification runs on FluidAudio 0.18.3. It sticks to the number you pick in "How many people spoke?". The old version sometimes found fewer people. The first time you identify speakers after updating, LocaRec downloads the speaker model again (about 21 MB).
+- Updated the tools that build and publish each release. You won't notice anything different in the app.
+
+#### Fixed
+
+- With Whisper, a sentence spoken near a two-minute mark could show up twice in the transcript. Now it shows up once.
+
+## 0.14.2 (2026-11-20)
+
+#### Changed
+
+- The direct download is now an optimized release build. Until now, LocaRec's own code and its speaker identification shipped as debug builds. Transcription and summaries were already optimized because they come prebuilt. The app is also about 9 MB smaller.
+- The release process now checks the version number before it builds anything. A number that was already used, or that skips one, stops the release. Releases also go out one at a time, so an older update can't replace a newer one. You won't notice anything different in the app.
+
+## 0.14.1 (2026-11-16)
+
+#### Removed
+
+- Old code for writing summaries with a local Ollama server. Every summary model runs on llama.cpp inside LocaRec, so none of it could run anymore. You won't notice anything different.
+
+## 0.14.0 (2026-11-16)
+
+#### Changed
+
+- Models is one page now. It shows how much room your models take, then lists the speech, summary and speaker models. Each row has the model's size and one action: Use, Download, or the download's progress with a button to cancel it. The model you're using says In use.
+- You pick your speech and summary models on Models, and download the speaker model there too. Settings doesn't have these anymore.
+- Deleting a model asks first. If it's the one you're using, the message says what stops until you pick another.
+- Settings is a page of plain rows. When a permission is missing, a note at the top says what it blocks for the way you record, with a button to allow it or open System Settings. Notifications only count when LocaRec is set to notify you. A permission your organization restricts is listed without a button, since System Settings can't change it.
+- What happens when a recording stops is in one place, in order: transcribe it, identify speakers, write the summary, then notify you. Each one says which model it uses, or links to Models when it needs one.
+- A few Settings labels changed. "Launch at startup" is now "Open at login", "Start hidden" is "Start in the menu bar", and "Reveal" is "Show in Finder".
+- Activity shows the running job's progress, how long it's been going and what comes next, and numbers the jobs waiting behind it. Click a meeting's name to open it.
+
+#### Fixed
+
+- You could delete a model that a waiting or running transcription or summary still needed, and that job would then fail. The delete button now waits until the work is done, and its tooltip says why.
+- Keeping Settings open during a recording no longer looks up your microphones ten times a second.
+- Messages about a missing model send you to Models instead of Settings.
+
+## 0.13.0 (2026-11-16)
+
+#### Added
+
+- A setup checklist in the sidebar, above your recordings, walks you through microphone access and a speech model, plus the optional summary and speaker models. You can allow the microphone and download each model right from the checklist, and it shows how far each download has got. It goes away once you can record and transcribe, or when you click Hide checklist.
+- If you record before a speech model is ready and automatic transcription is on, the recording is transcribed as soon as there is one: when a download finishes, or when you choose a model you've already downloaded.
+
+#### Changed
+
+- With no recordings yet, the window shows how to record your first meeting. Pick what to record from, then start recording or import a file. The setup steps that used to be on this screen are in the sidebar checklist now.
+- When you download a model and haven't chosen one of that kind yet, LocaRec uses it right away. You no longer have to click Set Active after your first download.
+- If the speech model you chose is missing, a new recording waits for one instead of failing to transcribe.
+- The speaker model downloads in the same queue as the other models, so you can watch its progress in Activity and cancel it there. Cancelling a download no longer shows up as an error.
+- Opening Settings no longer changes which models are chosen. It only clears a choice whose model isn't downloaded anymore.
+- Model names are shorter: "Gemma 4 E4B" instead of "Gemma 4 E4B IT (llama.cpp)".
+- Download progress updates once per percent, so the window does less work while a model downloads.
+
+#### Removed
+
+- The Get Started item at the bottom of the sidebar. The checklist replaces it.
+
+## 0.12.1 (2026-11-16)
+
+#### Fixed
+
+- If you picked a specific microphone in Settings, stopping a recording and starting another one right away (⌘⇧R twice) could leave the new recording silent while the app still showed it recording. Stopping the first one no longer cuts off the second.
+
+## 0.12.0 (2026-11-16)
+
+#### Added
+
+- You can type notes while you record. Each one is stamped with the moment you started typing it and shows up as a key moment once the meeting is saved. Pressing Return on an empty line drops a plain marker, like the old Add Marker button did. If you stop recording halfway through a note, the note is kept. The menu bar has the same note field.
+
+#### Changed
+
+- The recording page is quieter now: the title, a slim waveform and your notes, with the elapsed time and the input in use along the top. The input line names your actual microphone instead of "System Default".
+- The menu bar popover has the new look, and its gear button opens Settings.
+
+#### Fixed
+
+- The recording waveform follows the sound for every input. Before, it only moved with the default microphone, and with system audio, Both or a chosen microphone it sat still.
+- Renaming a meeting while it's being transcribed or summarized no longer gets undone when the job finishes. The same goes for speaker fixes made while a summary is being written.
+
+## 0.11.0 (2026-11-16)
+
+#### Added
+
+- Transcribing shows real progress. The meeting page lists each step: transcribing and identifying speakers each show a percentage, and writing the summary shows how long it's been going. The recording in the sidebar shows the same percentage with a thin bar.
+- LocaRec can write the summary as soon as transcription finishes. It's off by default. Turn it on in Settings, or for one recording with "Then write the summary" when you transcribe it.
+
+#### Changed
+
+- The transcribe options now sit on the meeting page, where the summary will go, instead of in a separate window. To transcribe a recording again, choose Transcribe from the ⋯ menu.
+- When something fails, the error shows where the summary goes, with a Try Again button.
+
+#### Fixed
+
+- Stop now really stops. Before, the job ran to the end and saved its result anyway. Now nothing a stopped job produced is kept, and the meeting says "Stopping…" until it has ended. Transcribing stops after the current two-minute stretch of audio; identifying speakers and writing a summary stop once the pass they're in finishes.
+
+## 0.10.0 (2026-11-06)
+
+#### Changed
+
+- A meeting reads as one page now. The summary, decisions, action items and key moments sit above the transcript, so there's no switching between tabs.
+- A timeline down the right edge shows who spoke when, where your key moments are and where playback is. Click or drag on it to jump to that point, in the audio and in the transcript.
+- The player floats over the bottom of the page and has a button to go back 15 seconds.
+- Searching the transcript marks every matching paragraph on the timeline. ⌘F jumps to the search box.
+- Click a speaker's name to change who said a paragraph, play from that point, rename speakers or delete the paragraph.
+
+## 0.9.0 (2026-11-05)
+
+#### Changed
+
+- The main window looks flatter. The sidebar and the meeting now sit side by side instead of floating as separate cards, and buttons and links use LocaRec's teal instead of the system blue, in light and dark mode.
+- Each recording in the sidebar shows one status on the right: how many action items are still open, "Not transcribed", "Queued", or what it's working on.
+- While you record, the Record button turns red, reads Stop & Save, and shows how long you've been recording.
+- Speakers get a new set of colors that stay readable in light and dark mode, so someone in an older meeting may show up in a different color than before.
+
+#### Fixed
+
+- VoiceOver reads the sidebar's show and hide buttons and the Import button by name, not by their icons.
+
+## 0.8.0 (2026-11-05)
+
+#### Added
+
+- Closing your Mac's lid during a recording stops and saves it, the same as pressing Stop. This also works when an external display keeps the Mac awake with the lid shut. If you start a recording with the lid already closed, LocaRec leaves it running. Putting the Mac to sleep from the Apple menu stops a recording too.
+
+## 0.7.2 (2026-11-02)
+
+#### Fixed
+
+- If LocaRec can't read part of its list of recordings, it keeps every recording it can still read and saves a copy of the original file next to it. Before, one damaged entry could empty the whole list, and the next recording would save over it.
+- Changing the recordings folder moves only LocaRec's own recordings. It used to move everything in the old folder, so if you had picked a folder like Documents and later switched, all of Documents went with it. The Mac App Store version can now reach the old folder too, so recordings actually make the move. You can't change the folder while a recording is running.
+- If a System Audio + Microphone recording hits a problem as it stops, like a microphone unplugged mid-meeting, LocaRec keeps whichever track it got. If neither track can be read, LocaRec leaves both in your recordings folder instead of deleting them.
+- Quitting, logging out or restarting during a recording stops and saves it first. If LocaRec crashes or is force-quit mid-recording, it recovers the audio the next time it opens, instead of leaving the recording stuck as "Recording".
+- Clicking Record twice quickly, or pressing ⌘⇧R while a recording is still starting, no longer starts a second recording on top of the first.
+
+## 0.7.1 (2026-08-09)
+
+#### Changed
+
+- Recordings are now saved to a folder you pick, not to a hidden folder inside the app. The first time you record or import, LocaRec asks where to keep them; after that it remembers. You can move the folder later from Settings, and any recordings already made move with it.
+
+#### Fixed
+
+- Recordings made by earlier versions are moved out of the app's private storage into your chosen folder the first time you pick one. If a file cannot be moved because something with the same name is already there, the original is left alone and LocaRec tries again next launch.
+
+## 0.7.0 (2026-08-08)
+
+#### Changed
+
+- Summaries go into more detail. The overview runs four to six sentences and covers what was discussed and why, decisions are written out as full sentences with the reasoning behind them where the transcript has it, and action items describe the task well enough to act on without going back to the recording.
+- The microphone step in the welcome checklist and the permission banner in Settings now read "Continue" rather than "Grant" and "Grant Access". macOS still asks in its own words; the app no longer leans on the answer first.
+- The permissions alert on launch says which permissions are off and where to change them in System Settings. It used to tell you to approve the macOS prompt.
+
+## 0.6.0 (2026-07-16)
+
+#### Added
+
+- Swipe a recording left in the sidebar to bring up a Delete button. It still asks you to confirm before deleting, and the right-click Delete menu still works.
+
+## 0.5.0 (2026-07-16)
+
+#### Added
+
+- Fix speaker labels straight from the transcript. Right-click a speaker's avatar or name to move that line to the right person, or delete the line when it is just noise. Correcting a line rejoins it with the lines around it when they are the same speaker, and a speaker left with nothing drops off the list.
+
+#### Changed
+
+- The record and import controls now sit in the sidebar, within reach on every screen, rather than only in the top-right of the detail view.
+
+## 0.4.0 (2026-07-15)
+
+#### Fixed
+
+- System audio was never recorded. A recording set to "System" or "Both" saved only the microphone, with nothing from calls or other apps and no warning that anything was missing. It now captures system audio correctly, so those recordings include what was playing on your Mac.
+
+#### Changed
+
+- When system audio cannot be captured, the app now warns you after you stop recording instead of silently saving an empty track.
+
+## 0.3.8 (2026-07-14)
+
+#### Changed
+
+- The Sparkle update feed now points at the renamed appcast repo, locarec-appcast (was localmeet-appcast). This lines it up with the app's own rename to LocaRec.
+
+## 0.3.7 (2026-07-14)
+
+#### Added
+
+- A Mac App Store version, built sandboxed and signed for submission alongside the direct download.
+
+## 0.3.6 (2026-07-13)
+
+#### Changed
+
+- The first-run setup checklist now includes speaker identification, so it is easier to find during onboarding. You still turn it on and download it from Settings.
+
+#### Fixed
+
+- A recording waiting in the transcription queue no longer shows the "Generate Summary" prompt on its Summary tab. It now says transcription is queued or running until the transcript is ready.
+- Cancelling a transcription that had a summary queued behind it no longer leaves the recording marked as needing attention. The waiting summary is dropped along with the cancelled transcription.
+
+## 0.3.5 (2026-07-13)
+
+#### Added
+
+- Line up several model downloads at once instead of installing them one at a time. A new Activity panel in the sidebar shows what is downloading and what is waiting, with buttons to cancel or remove items.
+- Queue transcription and summarization across recordings: start a job on one recording, queue more on others, and they run in order, one at a time. Queued recordings show a Queued badge in the sidebar.
+- The download and processing queues survive quitting the app and pick up where they left off on the next launch.
+
+## 0.3.1 (2026-07-13)
+
+#### Fixed
+
+- During first-run setup, opening the transcription or summary model step took you to the Models screen with no way back to the checklist. A Get Started item now stays in the sidebar until your first recording, so you can pick setup back up.
+
+## 0.3.0 (2026-07-13)
+
+#### Changed
+
+- Renamed the app from LocalMeet to LocaRec. Because the bundle identifier changed with the rename, this version installs as a new app rather than updating an existing LocalMeet install; your recordings, transcripts, and downloaded models are kept.
+
+## 0.2.0 (2026-07-13)
+
+#### Added
+
+- On-device speaker identification that runs natively through Core ML, with no separate runtime to install.
+- A speaker-count option in the transcribe dialog, so you can tell speaker identification how many people were in a given meeting instead of leaving it to guess.
+
+#### Changed
+
+- Summaries now come back in a fixed structure (Overview, Decisions, Action Items) and are always written in the app's language, whatever language the meeting was held in.
+- The summary models are now Mistral 7B, Qwen3 8B, and Gemma 4 (E2B and E4B), all running natively.
+- Transcription and summarization run natively on the Mac. The app no longer ships a Python runtime, which brings the download from roughly 592 MB down to about 42 MB.
+
+#### Removed
+
+- The Hugging Face sign-in. Models download without an account now.
+
+#### Fixed
+
+- Picking an active summary model did not stick, and the chosen model was missing from Settings.
+- Summaries could fail outright or come back empty with some models, including on long meetings.
+- The transcribe dialog would not open.
+- Non-English meetings could break the summary layout, and a model's internal reasoning text could leak into the summary.
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.2/LocaRec-0.15.2-e888cd0.zip" length="15590494" type="application/octet-stream" sparkle:edSignature="b2i0TYV0tF6aRDYuKqcRrLCUIRxq4EoZMRl0j2wvLmL9GdFeC3yU2srQCdV7RjEoTXlDv1aoMgyZgofXecsDAA=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.3/LocaRec-0.15.3-01cc068.zip" length="15590255" type="application/octet-stream" sparkle:edSignature="YBO0sl7clKjBJolqZu6JakNcrL36BbHfhzvNl6JMXSGZ6RtCR46Ha6PNTqckAzLsSP1H16qyGI/inQbBbe0wAQ=="/>
         </item>
     </channel>
 </rss>
