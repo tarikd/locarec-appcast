@@ -3,24 +3,37 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.14.2</title>
-            <pubDate>Fri, 20 Nov 2026 15:13:43 +0000</pubDate>
+            <title>0.15.0</title>
+            <pubDate>Fri, 20 Nov 2026 16:52:54 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>72</sparkle:version>
-            <sparkle:shortVersionString>0.14.2</sparkle:shortVersionString>
+            <sparkle:version>73</sparkle:version>
+            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.14.2
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.15.0
+
+### Added
+
+- Parakeet Ultra is the new recommended speech model. It's the same size as Parakeet TDT 0.6B v3 and covers the same 25 European languages, but makes fewer mistakes in each of them. It also splits long recordings at pauses, so speaker labels follow who's talking more closely.
+- Two new summary models, Qwen3.5 9B and Ministral 3 8B.
 
 ### Changed
 
-- The direct download is now an optimized release build. Until now, LocaRec's own code and its speaker identification shipped as debug builds. Transcription and summaries were already optimized because they come prebuilt. The app is also about 9 MB smaller.
-- The release process now checks the version number before it builds anything. A number that was already used, or that skips one, stops the release. Releases also go out one at a time, so an older update can't replace a newer one. You won't notice anything different in the app.
+- Speech recognition now runs on transcribe.cpp 0.4.2, which Parakeet Ultra needs.
+- Some older models are retired: Parakeet TDT 0.6B v3 and its Q8 build, the Q8 build of Whisper Large v3 Turbo, Mistral 7B Instruct v0.3 and Qwen3 8B. If you already downloaded one, it keeps working and stays in Models so you can delete it later. If you didn't, you won't see it.
+- Speakers are now matched to the transcript word by word. With Parakeet, a new paragraph starts at the word where the speaker changes, so a single paragraph no longer holds a whole back-and-forth between two people. In a test conversation with three people, the share of words credited to the right person went from about 40% to 85%, or 75% when LocaRec works out how many people spoke. Whisper doesn't give word timings, so it still labels a stretch of speech at a time.
+- When a speaker change lands a word or two from the end of a sentence, and those words fall in the gap between two people's turns, they stay with the sentence they belong to.
+- Speaker identification runs on FluidAudio 0.18.3. It sticks to the number you pick in "How many people spoke?". The old version sometimes found fewer people. The first time you identify speakers after updating, LocaRec downloads the speaker model again (about 21 MB).
+- Updated the tools that build and publish each release. You won't notice anything different in the app.
 
-Build: 72
-Commit: 93ed73b
+### Fixed
+
+- With Whisper, a sentence spoken near a two-minute mark could show up twice in the transcript. Now it shows up once.
+
+Build: 73
+Commit: 21f4cfc
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.14.2/LocaRec-0.14.2-93ed73b.zip" length="13905936" type="application/octet-stream" sparkle:edSignature="DKGnSUGbGwyh/2ftensd7JqpRzb8/r5njw+u23s/uVi54fGa7+zQbq0ERt7YdZ2lwfBmJHxHaq+K1JuqBxXcBg=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.0/LocaRec-0.15.0-21f4cfc.zip" length="15590453" type="application/octet-stream" sparkle:edSignature="oL+xbICzso5jbkLWNkAoci4tXw0BABSBY0nFTNtKjCiuWrnPEHr8hCpD1USIoBaxPku9I3DiznlFtTbGOqpmAQ=="/>
         </item>
     </channel>
 </rss>
