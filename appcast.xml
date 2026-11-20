@@ -3,37 +3,23 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.15.0</title>
-            <pubDate>Fri, 20 Nov 2026 16:52:54 +0000</pubDate>
+            <title>0.15.1</title>
+            <pubDate>Fri, 20 Nov 2026 17:11:15 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>73</sparkle:version>
-            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
+            <sparkle:version>74</sparkle:version>
+            <sparkle:shortVersionString>0.15.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.15.0
-
-### Added
-
-- Parakeet Ultra is the new recommended speech model. It's the same size as Parakeet TDT 0.6B v3 and covers the same 25 European languages, but makes fewer mistakes in each of them. It also splits long recordings at pauses, so speaker labels follow who's talking more closely.
-- Two new summary models, Qwen3.5 9B and Ministral 3 8B.
+            <description sparkle:format="markdown"><![CDATA[# LocaRec 0.15.1
 
 ### Changed
 
-- Speech recognition now runs on transcribe.cpp 0.4.2, which Parakeet Ultra needs.
-- Some older models are retired: Parakeet TDT 0.6B v3 and its Q8 build, the Q8 build of Whisper Large v3 Turbo, Mistral 7B Instruct v0.3 and Qwen3 8B. If you already downloaded one, it keeps working and stays in Models so you can delete it later. If you didn't, you won't see it.
-- Speakers are now matched to the transcript word by word. With Parakeet, a new paragraph starts at the word where the speaker changes, so a single paragraph no longer holds a whole back-and-forth between two people. In a test conversation with three people, the share of words credited to the right person went from about 40% to 85%, or 75% when LocaRec works out how many people spoke. Whisper doesn't give word timings, so it still labels a stretch of speech at a time.
-- When a speaker change lands a word or two from the end of a sentence, and those words fall in the gap between two people's turns, they stay with the sentence they belong to.
-- Speaker identification runs on FluidAudio 0.18.3. It sticks to the number you pick in "How many people spoke?". The old version sometimes found fewer people. The first time you identify speakers after updating, LocaRec downloads the speaker model again (about 21 MB).
-- Updated the tools that build and publish each release. You won't notice anything different in the app.
+- The release process now also uploads each version to App Store Connect, with the same version and build number as the direct download. You won't notice anything different in the app.
 
-### Fixed
-
-- With Whisper, a sentence spoken near a two-minute mark could show up twice in the transcript. Now it shows up once.
-
-Build: 73
-Commit: 21f4cfc
+Build: 74
+Commit: 263fe1d
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.0/LocaRec-0.15.0-21f4cfc.zip" length="15590453" type="application/octet-stream" sparkle:edSignature="oL+xbICzso5jbkLWNkAoci4tXw0BABSBY0nFTNtKjCiuWrnPEHr8hCpD1USIoBaxPku9I3DiznlFtTbGOqpmAQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.1/LocaRec-0.15.1-263fe1d.zip" length="15590405" type="application/octet-stream" sparkle:edSignature="OkKo7qCZC1bTKFsPORHthzs2tGzlPVo0BIN9ypNrcIBc2ArnNZz0Fw+NHo2oSAdG0TGnQIfjdKAECTRsGHJ/Aw=="/>
         </item>
     </channel>
 </rss>
