@@ -3,14 +3,24 @@
     <channel>
         <title>LocaRec</title>
         <item>
-            <title>0.15.3</title>
-            <pubDate>Fri, 20 Nov 2026 17:59:35 +0000</pubDate>
+            <title>0.16.0</title>
+            <pubDate>Fri, 27 Nov 2026 22:51:04 +0000</pubDate>
             <link>https://github.com/tarikd/LocaRec</link>
-            <sparkle:version>76</sparkle:version>
-            <sparkle:shortVersionString>0.15.3</sparkle:shortVersionString>
+            <sparkle:version>77</sparkle:version>
+            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 0.15.3 (2026-11-20)
+            <description sparkle:format="markdown"><![CDATA[## 0.16.0 (2026-11-27)
+
+#### Added
+
+- After a summary, LocaRec now suggests a short title for the meeting, a few words like "Budget review". It appears under the meeting's name. Click it and it goes after the date, as in "Meeting 26 Nov 2026 at 15:04 – Budget review", and LocaRec renames the audio file to match. If you'd rather not click each time, turn on "Add a short title" in Settings. You only get the suggestion while the meeting is still named by its date, so a name you typed yourself stays as it is.
+
+#### Changed
+
+- New meetings are called "Meeting 26 Nov 2026 at 15:04" whatever your region settings are, and the audio file gets the same name ("Meeting 26 Nov 2026 at 15.04.wav") instead of a long string of letters and numbers. The file name has a dot in the time because Finder shows a colon as a slash. Imported files get the same kind of file name and keep their original name as the title. Recordings you already have keep their file names.
+
+## 0.15.3 (2026-11-20)
 
 #### Changed
 
@@ -288,7 +298,7 @@
 - The transcribe dialog would not open.
 - Non-English meetings could break the summary layout, and a model's internal reasoning text could leak into the summary.
 ]]></description>
-            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.15.3/LocaRec-0.15.3-01cc068.zip" length="15590255" type="application/octet-stream" sparkle:edSignature="YBO0sl7clKjBJolqZu6JakNcrL36BbHfhzvNl6JMXSGZ6RtCR46Ha6PNTqckAzLsSP1H16qyGI/inQbBbe0wAQ=="/>
+            <enclosure url="https://github.com/tarikd/locarec-appcast/releases/download/v0.16.0/LocaRec-0.16.0-041be9d.zip" length="15606968" type="application/octet-stream" sparkle:edSignature="atIKbT/Y2ywRhvWdFH98wdSGwAXDqY2k8fiZjQH6iGzWSUWcY4C1CT/3/7xR94Pvzxx3Z9GEKrm9bGsnK3lbBw=="/>
         </item>
     </channel>
 </rss>
